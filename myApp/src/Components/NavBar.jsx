@@ -12,11 +12,11 @@ export default function NavBar() {
             </div>
             <div className={`flex justify-center items-center border ${darkMode ? "border-white" : "border-gray-900"} rounded-xl p-2 h-8 my-auto mx-6`}>
                 <button className={`${darkMode ? "flex" : "hidden"} mr-1`} onClick={toggleDarkMode}>
-                {darkMode ? <i class="fa-regular fa-sun"></i> : <i class="fa-regular fa-moon"></i>}
+                {darkMode ? <i className="fa-regular fa-sun"></i> : <i className="fa-regular fa-moon"></i>}
                 </button>
                 <div className={`h-4 w-4 rounded-full ${darkMode ? "bg-white" : "bg-gray-900"}`}></div>
                 <button className={`${darkMode ? "hidden" : "flex"} ml-1`} onClick={toggleDarkMode}>
-                    {darkMode ? <i class="fa-regular fa-sun"></i> : <i class="fa-regular fa-moon"></i>}
+                    {darkMode ? <i className="fa-regular fa-sun"></i> : <i className="fa-regular fa-moon"></i>}
                 </button>
             </div>
         </nav>
