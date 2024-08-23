@@ -71,14 +71,22 @@ export default function Data() {
             <div className={`${darkMode ? 'bg-[#111827AA]' : 'bg-[#FFFFFFAA]'} flex flex-col justify-center items-center gap-3 w-[90%] md:w-[80%] py-5 px-3 my-auto`}>
                 <h3 className='text-xl md:text-3xl font-semibold'>Discover the weather in any city in the world</h3>
                 <div className='w-[80%] md:w-[60%] flex justify-center items-center shadow-xl'>
-                    <input type="text" placeholder='Ingresa el nombre de la ciudad' className='bg-white text-gray-900 text-lg md:text-xl px-2 py-1 w-full rounded-l-lg outline-none' value={cityName} onChange={(e) => {setCityName(e.target.value)}} />
-                    <button className='bg-blue-500 text-white text-xl px-3 py-1 rounded-r-lg' onClick={search}><i className="fa-solid fa-magnifying-glass-location"></i></button>
+                    <input type="text" 
+                    placeholder='Ingresa el nombre de la ciudad' 
+                    className='bg-white text-gray-900 text-lg md:text-xl px-2 py-1 w-full rounded-l-lg outline-none' 
+                    value={cityName} 
+                    onChange={(e) => {setCityName(e.target.value)}} />
+                    <button className='bg-blue-500 text-white text-xl px-3 py-1 rounded-r-lg' onClick={search}>
+                        <i className="fa-solid fa-magnifying-glass-location"></i>
+                    </button>
                 </div>
                 <div className='flex flex-col justify-center items-center'>
                     {city && country && (
                         <>
                             <h3 className='text-xl md:text-3xl font-medium'>{city}, {country}</h3> 
-                            <p className='text-2xl md:text-4xl'><i className="fa-solid fa-temperature-half"></i> {(temp - 273.15).toFixed(1)} ºC</p>
+                            <p className='text-2xl md:text-4xl'>
+                                <i className="fa-solid fa-temperature-half"></i> {(temp - 273.15).toFixed(1)} ºC
+                            </p>
                             <p className='text-lg md:text-2xl'>{desc}</p>
                         </>
                     )}
